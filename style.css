@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif), sans-serif;
+}
+
+.main {
+    padding: 8px;
+}
+
+/* Code for left block starts here */
+
+.left {
+    width: 24vw;
+    /* height: calc(100vh - 16px); */
+    margin-right: 8px;
+}
+
+/* Have to add media queryies for left to enable hamburger functionality */
+
+.home {
+    /* padding: 18px; */
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+    /* margin: 7px 0px; */
+}
+
+.right {
+    position: relative;
+    width: calc(76vw - 24px);
+    /* height: calc(100vh - 16px); */
+}
+
+.home ul li {
+    /* width: 25px; */
+    margin-top: 15px;
+    list-style: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.library_nav {
+    position: relative;
+}
+
+.library_nav :nth-child(2) {
+    position: absolute;
+    right: 0px;
+}
+
+.plussign {
+    width: 15px;
+}
+
+.songlist_container {
+    /* height: ; */
+    padding: 2px;
+    margin-top: 20px;
+    height: 60vh;
+    width: inherit;
+    overflow-y: scroll;
+    /* font-size: 15px; */
+}
+
+.songlist {
+    color: white;
+}
+
+.songlist ul li {
+    padding: 10px;
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin: 5px 2px;
+}
+
+.leftsonginfo {
+    width: 50%;
+    justify-content: left;
+}
+
+.leftsonginfo :first-child {
+    /* position: absolute; */
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.leftsonginfo>div {
+    margin: 2px;
+}
+
+.playnow {
+    gap: 7px;
+}
+
+.playnow span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer {
+    padding-top: 25px;
+    gap: 20px;
+    /* position: absolute; */
+    flex-wrap: wrap;
+    bottom: 30px;
+}
+
+.footer a {
+    color: grey;
+    font-size: 10px;
+}
+
+/* Code for left block ends here */
+/* Code for right block starts here */
+/* Code for right sides header & nav starts here */
+.header {
+    padding: 7px 24px;
+    height: 60px;
+    /* justify-content: space-between; */
+}
+
+.arrowcontainer img {
+    width: 15px;
+}
+
+.arrows {
+    margin: 0px 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    border: none;
+}
+
+.sign_btn:hover {
+    color: white;
+    font-size: 17px;
+}
+
+.log_btn:hover {
+    font-size: 17px;
+}
+
+/* Code for right sides header & nav ends here */
+
+/* Code for playlists and artists block is here */
+.playlists {
+    padding: 0px 24px;
+}
+
+.playlist_head {
+    margin-bottom: 20px;
+}
+
+.showall_btn {
+    padding-top: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.showall_btn:hover {
+    color: rgb(214, 213, 213);
+    text-decoration: underline;
+}
+
+.cards_container {
+    flex-wrap: wrap;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.cards {
+    margin-top: 10px;
+    width: 157px;
+    padding: 10px;
+    border-radius: 6px;
+    position: relative;
+    /* Turn on these color only when someone hover to it */
+    /* background-color: #252525; */
+}
+
+.play_btn-animation {
+    opacity: 1;
+    top: 118px;
+}
+
+.play_btn {
+    width: 30px;
+    height: 30px;
+    padding: 9px;
+    position: absolute;
+    top: 80%;
+    right: 20px;
+    border-radius: 30px;
+    background-color: rgb(83, 189, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* improve this code for hover background color effect */
+.cards:hover {
+    background-color: #252525;
+}
+
+.cards>img {
+    height: 163px;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.cards h4 {
+    margin: 5px 0px;
+}
+
+.cards p {
+    font-size: 15px;
+}
+
+/* code for playbar starts here */
+.playbar {
+    /* filter: invert(1); */
+    background-color: #292e29;
+    height: 40px;
+    width: 95%;
+    padding: 10px 0px;
+    position: absolute;
+    margin: auto;
+    bottom: 20px;
+    border-radius: 18px;
+}
+
+.abovebar {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.songinfo {
+    width: 40%;
+}
+
+.songbuttons {
+    width: 20%;
+}
+
+.songtime {
+    width: 40%;
+}
+
+.songbuttons {
+    gap: 20px;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.seekbar {
+    height: 5px;
+    width: 98%;
+    background: rgb(77, 77, 77);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 13px;
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    z-index: 100;
+    transition: left 0.5s;
+}
+
+/* code for playbar ends here */
+/* Code for right block ends here */
+
+/* media query Starts*/
+@media (max-width: 1100px) {
+    .left{
+        background-color: red;
+        position: absolute;
+        left: -100%;
+        transition: .5s;
+    }
+    .right{
+        width: 100%;
+    }
+    .playbar{
+        bottom:0px;
+    }
+  }
