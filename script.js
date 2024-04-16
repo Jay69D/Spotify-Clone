@@ -41,7 +41,7 @@ const playMusic = (track, pause = false) => {
     currentsong.src = "Songs/" + track
     if (!pause) {
         currentsong.play()
-        play.src = "pause.svg"
+        play.src = "Assets/pause.svg"
     }
     document.querySelector(".songinfo").innerHTML = decodeURI(track).split(".mp3")[0]
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
@@ -59,7 +59,7 @@ async function main() {
     let songUL = document.querySelector(".songlist").getElementsByTagName('ul')[0]
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>
-        <img class="logosetter" src="music.svg">
+        <img class="logosetter" src="Assets/music.svg">
         <div class="leftsonginfo">
             <div>${song.split("/Songs/")[1].replaceAll("%20", " ")}</div>
             <div>${song.split("/Songs/")[1].replaceAll("%20", " ").split("-")[0]}</div>
@@ -68,7 +68,7 @@ async function main() {
         </div>
         <div class="playnow flex align-center">
             <span>Play Now</span>
-            <img class="logosetter" src="playbutton.svg" alt="">
+            <img class="logosetter" src="Assets/playbutton.svg" alt="">
         </div></li>`;
     }
 
@@ -85,11 +85,11 @@ async function main() {
     play.addEventListener("click", () => {
         if (currentsong.paused) {
             currentsong.play()
-            play.src = "pause.svg"
+            play.src = "Assets/pause.svg"
         }
         else {
             currentsong.pause()
-            play.src = "playbutton.svg"
+            play.src = "Assets/playbutton.svg"
 
         }
     })
