@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone By JD</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
 </head>
 
 <body>
     <div class="main bg-black flex">
         <div class="left">
+            <div class="close">
+            </div>
             <div class="home bg-grey padding bg-radius">
-                <div class="logo_container"><img  width="110" class="invert" src="Assets/logo.svg" alt="Logo"></div>
+                <div class="logo_container flex justify-between">
+                    <img width="110" class="invert" src="Assets/logo.svg" alt="Logo">
+                    <img class="close_btn logosetter" src="Assets/close.svg" alt="">
+                </div>
                 <ul>
-                    <li class="flex align-center gap"><img class="logosetter flex" src="Assets/home.svg" alt="Home">Home</li>
-                    <li class="flex align-center gap"><img class="logosetter flex" src="Assets/search.svg" alt="Library">Search
+                    <li class="flex align-center gap"><img class="logosetter flex" src="Assets/home.svg" alt="Home">Home
+                    </li>
+                    <li class="flex align-center gap"><img class="logosetter flex" src="Assets/search.svg"
+                            alt="Library">Search
                     </li>
                 </ul>
             </div>
@@ -46,6 +53,7 @@
         <div class="bg-grey right bg-radius">
             <div class="header flex align-center  justify-between">
                 <div class="arrowcontainer flex">
+                    <img class="hamburger logosetter" width="40" src="Assets/hamburger.svg" alt="">
                     <button class="arrows bg-black2 flex justify-center align-center">
                         <img class="logosetter" src="Assets/leftarrow.svg" alt="">
                     </button>
@@ -63,148 +71,43 @@
                     <h2>Spotify Playlists</h2>
                     <div class="grey showall_btn">show all</div>
                 </div>
-                <div class="cards_container flex">
-                    <div class="cards card1">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-1.jpeg" alt="No image">
-                        <h4>New Music Friday</h4>
-                        <p class="grey">The very best in new music from around th...</p>
-                    </div>
-                    <div class="cards card2">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-2.jpeg" alt="No image">
-                        <h4>lofi beats</h4>
-                        <p class="grey">chill beats, lofi vibes, new tracks every...</p>
-                    </div>
-                    <div class="cards card3">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-3.jpeg" alt="No image">
-                        <h4>All Out 2020s</h4>
-                        <p class="grey">The biggest songs of the 2020s.</p>
-                    </div>
-                    <div class="cards card4">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-4.jpeg" alt="No image">
-                        <h4>Chillout Lounge</h4>
-                        <p class="grey">Just lean back and enjoy relaxed beats.</p>
-                    </div>
-                    <div class="cards card5">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-5.jpeg" alt="No image">
-                        <h4>Today's Top Hits</h4>
-                        <p class="grey">Olivia Rodrigo is on top of the Hottest 50!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
-                    <div class="cards card6">
-                        <div class="play_btn play_btn-animation">
-                            <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
-                        </div>
-                        <img src="Assets/Card-6.jpeg" alt="No image">
-                        <h4>Happy Beats</h4>
-                        <p class="grey">Feel-good dance music!</p>
-                    </div>
+                <div class="cards_container flex align-center">
+                     <!-- Following card is for example and troubleshooting -->
+                    <!-- <div data-folder="ncs" class="cards card1"> -->
+                        <!-- <div class="play_btn"> -->
+                            <!-- <img src="Assets/playbutton.svg" width="25px" height="25px" alt=""> -->
+                        <!-- </div> -->
+                        <!-- <img src="Assets/Card-1.jpeg" alt="No image"> -->
+                        <!-- <h4>New Music Friday</h4> -->
+                        <!-- <p class="grey">The very best in new music from around th...</p> -->
+                    <!-- </div> -->
                 </div>
                 <div class="playbar">
                     <div class="abovebar">
                         <div class="songinfo flex justify-center align-center"></div>
                         <div class="songbuttons flex justify-center">
                             <!-- <img src="https://cdn.hugeicons.com/icons/previous-solid-sharp.svg" alt="previous" width="28" height="28"> -->
-                            <img id="previous" class="invert" src="Assets/previoussong.svg" alt="previous" width="28"
+                            <img id="previous" class="invert" src="Assets/previoussong.svg" alt="previous" width="35"
                                 height="28">
-                            <img id="play" class="invert" src="Assets/playbutton.svg" width="30px" alt="">
+                            <img id="play" class="invert" src="Assets/playbutton.svg" width="35" alt="">
                             <!-- <img src="https://cdn.hugeicons.com/icons/next-solid-sharp.svg" alt="next" width="28" height="28"> -->
-                            <img id="next" class="invert" src="Assets/nextsong.svg" alt="next" width="28" height="28">
+                            <img id="next" class="invert" src="Assets/nextsong.svg" alt="next" width="35" height="28">
                         </div>
-                        <div class="songtime flex justify-center align-center"></div>
+                        <div class="timevol flex align-center">
+                            <div class="songtime flex justify-center align-center"></div>
+                            <div class="volume flex align-center justify-center">
+                                <img class="logosetter" src="Assets/volume.svg" alt="">
+                                <div class="range flex align-center"><input type="range" name="volume" id=""></div>
+                            </div>
+                        </div>
+                        <div class="seekbar">
+                            <div class="circle"></div>
+                        </div>
                     </div>
-                    <div class="seekbar">
-                        <div class="circle"></div>
-                    </div>
-                </div>
 
-            </div>
-            <script src="script.js"></script>
+                </div>
+                <script src="js/script.js"></script>
+                <!-- <script src="js/testjs.js"></script> -->
 </body>
 
 </html>
