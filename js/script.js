@@ -23,7 +23,7 @@ function formatTime(seconds) {
 //get all the songs
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:3000/${folder}`);
+    let a = await fetch(`${folder}`);
     let response = await a.text();
     let div = document.createElement('div');
     div.innerHTML = response;
@@ -42,7 +42,7 @@ async function getSongs(folder) {
     songUL.innerHTML = ""
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>
-        <img class="logosetter" src="Assets/music.svg">
+        <img class="logosetter" src="/Assets/music.svg">
         <div class="leftsonginfo">
         <div>${song.split(`${currFolder}`)[1].replaceAll("%20", " ")}</div>
         <div>${song.split(`${currFolder}`)[1].replaceAll("%20", " ").split("-")[0]}</div>
@@ -77,7 +77,7 @@ const playMusic = (track, pause = false) => {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:3000/Songs`);
+    let a = await fetch(`/Songs`);
     let response = await a.text();
     let div = document.createElement('div');
     div.innerHTML = response;
@@ -90,13 +90,13 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-2)[0];
 
             // Get the metadata of the folder
-            let a = await fetch(`http://127.0.0.1:3000/Songs/${folder}/info.json`);
+            let a = await fetch(`/Songs/${folder}/info.json`);
             let response = await a.json();
             cards_container.innerHTML += `<div data-folder="${folder}" class="cards">
            <div class="play_btn">
                <img src="Assets/playbutton.svg" width="25px" height="25px" alt="">
            </div>
-           <img src="Songs/${folder}/Cover.jpg" alt="No image">
+           <img src="/Songs/${folder}/Cover.jpg" alt="No image">
            <h4>${response.title}</h4>
            <p class="grey">${response.description}</p>
        </div>`
@@ -106,13 +106,16 @@ async function displayAlbums() {
     //Load the playlist whenever the card is clicked
     Array.from(document.getElementsByClassName("cards")).forEach((e) => {
         e.addEventListener("click", async item => {
-            await getSongs(`songs/${item.currentTarget.dataset.folder}/`)
+            await getSongs(`/Songs/${item.currentTarget.dataset.folder}/`)
             play.src = "Assets/playbutton.svg"
             // You can replace following 1 line code if you can add second page for each individual album or card
             document.querySelector('.left').style.left = "0" // If new song album or card is selected then new songs will show in library
-            
-            let defaultsong = songs[0].split(`${currFolder}`)[1].replaceAll("%20", " ") 
+
+            let defaultsong = songs[0].split(`${currFolder}`)[1].replaceAll("%20", " ")
+            // let defaultsong = songs[0].split(`${currFolder}`)[1]
             playMusic(defaultsong)
+            document.querySelector(".cards_container").style.height = "67vh"
+            document.querySelector(".cards_container").style.overflow = "hidden"
         })
     })
 }
@@ -121,7 +124,7 @@ async function displayAlbums() {
 async function main() {
     //Get the list of all songs
 
-    await getSongs("Songs/ncs/");
+    await getSongs(`/Songs/NCS/`);
 
     await displayAlbums()
     //Display all the albums on the page
@@ -155,11 +158,15 @@ async function main() {
     // Add an eventlistener to hamburger
     document.querySelector(".hamburger").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
+        document.querySelector(".cards_container").style.height = "67vh";
+        document.querySelector(".cards_container").style.overflow = "hidden";
     })
-
+    
     // Add an eventlistener for close button in the left
     document.querySelector(".close_btn").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-150%";
+        document.querySelector(".cards_container").style.height = "fit-content";
+        document.querySelector(".cards_container").style.overflow = "auto";
     })
     // Add an eventlistener for playliists when left is pulled
 

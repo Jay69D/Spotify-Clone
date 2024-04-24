@@ -21,6 +21,8 @@
     width: 24vw;
     /* height: calc(100vh - 16px); */
     margin-right: 8px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .right {
@@ -35,18 +37,25 @@
 }
 
 .home {
+    height: 15%;
+    min-height: fit-content;
+    width:90%;
     /* padding: 18px; */
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     padding-bottom: 0px;
     /* margin: 7px 0px; */
 }
 
 .home ul li {
     /* width: 25px; */
-    margin-top: 15px;
+    margin-top: 3vh;
     list-style: none;
     font-weight: 700;
     font-size: 15px;
+}
+
+.library {
+   width: 90%;
 }
 
 .library_nav {
@@ -268,6 +277,7 @@
 }
 
 .songinfo {
+    text-align: center;
     padding: 0 10px;
     width: 40%;
 }
@@ -327,8 +337,11 @@
 
 /* media query Starts*/
 @media (max-width: 1200px) {
+    .main{
+        padding: auto;
+    }
     .left {
-        height: 100vh;
+        height: 99vh;
         width: 370px;
         /* background-color: red; */
         position: absolute;
@@ -338,9 +351,17 @@
         background-color: black;
     }
 
+    .songlist_container {
+        height: 70%;
+    }
+
     .right {
         height: 97vh;
         width: 100%;
+    }
+
+    .footer {
+        padding: 20px;
     }
 
     .hamburger {
@@ -428,12 +449,15 @@
     }
 
     .right {
+        min-height: 100vh;
         height: fit-content;
         /* This  code gonna make website wholly scrollable */
         /* } */
     }
 
     .cards_container {
+        min-height: 65vh;
+        padding-bottom: 20px;
         overflow: visible;
         /* This  code gonna make website wholly scrollable */
     }
@@ -447,7 +471,9 @@
     }
 
     .playbar {
+        width: auto;
         position: sticky;
+        bottom: 20px;
     }
 
     .abovebar {
@@ -465,7 +491,7 @@
 
 @media(max-width:400px) {
     .left {
-        width: 95vw;
+        width: 100vw;
     }
 
     .header {
