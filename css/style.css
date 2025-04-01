@@ -37,8 +37,6 @@
 }
 
 .home {
-    height: 15%;
-    min-height: fit-content;
     width:90%;
     /* padding: 18px; */
     /* margin-bottom: 8px; */
@@ -55,6 +53,7 @@
 }
 
 .library {
+    height: 73%;
    width: 90%;
 }
 
